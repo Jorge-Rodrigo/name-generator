@@ -25,7 +25,7 @@ const ani2 = keyframes`
 
 const moveMounthUp = keyframes`
     from {
-      height: 550px;
+      height: 280px;
     }
     to {
       height: 25px;
@@ -34,7 +34,7 @@ const moveMounthUp = keyframes`
 
 const moveToothhUp = keyframes`
     from {
-      margin-top: 550px;  
+      margin-top: 280px;  
     }
     to { 
       margin-top: 25px;
@@ -122,12 +122,12 @@ export const Monster = styled.div`
     left: 0;
     background-color: #ff6695;
     width: 100%;
-    height: 550px;
+    height: 280px;
     z-index: 2;
     display: flex;
     justify-content: flex-start;
     gap: 3px;
-    transform: translateY(-50%);
+    /* transform: translateY(-50%); */
     animation: ${moveMounthUp} 2s forwards;
   }
 
@@ -137,7 +137,7 @@ export const Monster = styled.div`
     border-bottom-left-radius: 162px;
     border-bottom-right-radius: 197px;
     background-color: white;
-    margin-top: 550px;
+    margin-top: 280px;
     animation: ${moveToothhUp} 2s forwards;
   }
   .tooth-1-5 {
@@ -146,7 +146,7 @@ export const Monster = styled.div`
     border-bottom-left-radius: 85px;
     border-bottom-right-radius: 55px;
     background-color: white;
-    margin-top: 550px;
+    margin-top: 280px;
     animation: ${moveToothhUp} 2s forwards;
   }
   .tooth-1-6 {
@@ -155,7 +155,7 @@ export const Monster = styled.div`
     border-bottom-left-radius: 55px;
     border-bottom-right-radius: 85px;
     background-color: white;
-    margin-top: 550px;
+    margin-top: 280px;
     animation: ${moveToothhUp} 2s forwards;
   }
   .tooth-1-1 {
@@ -164,7 +164,7 @@ export const Monster = styled.div`
     border-bottom-left-radius: 162px;
     border-bottom-right-radius: 197px;
     background-color: white;
-    margin-top: 550px;
+    margin-top: 280px;
     animation: ${moveToothhUp} 2s forwards;
   }
   .tooth-1-2 {
@@ -173,7 +173,7 @@ export const Monster = styled.div`
     border-bottom-left-radius: 162px;
     border-bottom-right-radius: 197px;
     background-color: white;
-    margin-top: 550px;
+    margin-top: 280px;
     animation: ${moveToothhUp} 2s forwards;
   }
   .mounth-down {
