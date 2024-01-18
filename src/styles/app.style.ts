@@ -23,6 +23,34 @@ const ani2 = keyframes`
   }
 `;
 
+const moveMounthUp = keyframes`
+    from {
+      height: 550px;
+    }
+    to {
+      height: 25px;
+    }
+`;
+
+const moveToothhUp = keyframes`
+    from {
+      margin-top: 550px;  
+    }
+    to { 
+      margin-top: 25px;
+    }
+`;
+
+const moveMounthDown = keyframes`
+    from {
+      height: 280px;
+    }
+    to {
+      height: 25px;
+    }
+  
+`;
+
 export const AppStyle = styled.div`
   display: flex;
   justify-content: center;
@@ -94,11 +122,13 @@ export const Monster = styled.div`
     left: 0;
     background-color: #ff6695;
     width: 100%;
-    height: 25px;
+    height: 550px;
     z-index: 2;
     display: flex;
     justify-content: flex-start;
     gap: 3px;
+    transform: translateY(-50%);
+    animation: ${moveMounthUp} 2s forwards;
   }
 
   .tooth-1 {
@@ -107,7 +137,8 @@ export const Monster = styled.div`
     border-bottom-left-radius: 162px;
     border-bottom-right-radius: 197px;
     background-color: white;
-    margin-top: 25px;
+    margin-top: 550px;
+    animation: ${moveToothhUp} 2s forwards;
   }
   .tooth-1-5 {
     width: 50px;
@@ -115,7 +146,8 @@ export const Monster = styled.div`
     border-bottom-left-radius: 85px;
     border-bottom-right-radius: 55px;
     background-color: white;
-    margin-top: 25px;
+    margin-top: 550px;
+    animation: ${moveToothhUp} 2s forwards;
   }
   .tooth-1-6 {
     width: 50px;
@@ -123,7 +155,8 @@ export const Monster = styled.div`
     border-bottom-left-radius: 55px;
     border-bottom-right-radius: 85px;
     background-color: white;
-    margin-top: 25px;
+    margin-top: 550px;
+    animation: ${moveToothhUp} 2s forwards;
   }
   .tooth-1-1 {
     width: 75px;
@@ -131,7 +164,8 @@ export const Monster = styled.div`
     border-bottom-left-radius: 162px;
     border-bottom-right-radius: 197px;
     background-color: white;
-    margin-top: 25px;
+    margin-top: 550px;
+    animation: ${moveToothhUp} 2s forwards;
   }
   .tooth-1-2 {
     width: 55px;
@@ -139,19 +173,21 @@ export const Monster = styled.div`
     border-bottom-left-radius: 162px;
     border-bottom-right-radius: 197px;
     background-color: white;
-    margin-top: 25px;
+    margin-top: 550px;
+    animation: ${moveToothhUp} 2s forwards;
   }
   .mounth-down {
     position: fixed;
-    bottom: 0;
+    bottom: 0px;
     left: 0;
     background-color: #ff6695;
     width: 100%;
-    height: 25px;
+    height: 280px;
     z-index: 2;
     display: flex;
     justify-content: flex-start;
     gap: 3px;
+    animation: ${moveMounthDown} 2s forwards;
   }
   .tooth-2 {
     width: 55px;
