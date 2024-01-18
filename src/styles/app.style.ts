@@ -24,6 +24,12 @@ const ani2 = keyframes`
 `;
 
 export const AppStyle = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  flex-direction: column;
+  margin-top: 40px;
   .button-container-1 {
     position: relative;
     width: 100px;
@@ -38,6 +44,8 @@ export const AppStyle = styled.div`
     transition: 0.5s;
     letter-spacing: 1px;
     border-radius: 8px;
+    background: #000;
+
     button {
       width: 101%;
       height: 100%;
@@ -46,13 +54,13 @@ export const AppStyle = styled.div`
       font-size: 11px;
       letter-spacing: 1px;
       font-weight: bold;
-      background: #000;
+      background-color: #ff6695;
       -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
       mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
       -webkit-mask-size: 2300% 100%;
       mask-size: 2300% 100%;
       border: none;
-      color: #fff;
+      color: #000;
       cursor: pointer;
       -webkit-animation: ${ani2} 0.7s steps(22) forwards;
       animation: ${ani2} 0.7s steps(22) forwards;
@@ -65,7 +73,7 @@ export const AppStyle = styled.div`
   }
   .mas {
     position: absolute;
-    color: #000;
+    color: #fff;
     text-align: center;
     width: 101%;
     font-weight: 300;
@@ -74,5 +82,124 @@ export const AppStyle = styled.div`
     margin-top: 17px;
     overflow: hidden;
     font-weight: bold;
+  }
+`;
+
+export const Monster = styled.div`
+  min-width: 100%;
+
+  .mounth-up {
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #ff6695;
+    width: 100%;
+    height: 25px;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-start;
+    gap: 3px;
+  }
+
+  .tooth-1 {
+    width: 55px;
+    height: 35px;
+    border-bottom-left-radius: 162px;
+    border-bottom-right-radius: 197px;
+    background-color: white;
+    margin-top: 25px;
+  }
+  .tooth-1-5 {
+    width: 50px;
+    height: 55px;
+    border-bottom-left-radius: 85px;
+    border-bottom-right-radius: 55px;
+    background-color: white;
+    margin-top: 25px;
+  }
+  .tooth-1-6 {
+    width: 50px;
+    height: 55px;
+    border-bottom-left-radius: 55px;
+    border-bottom-right-radius: 85px;
+    background-color: white;
+    margin-top: 25px;
+  }
+  .tooth-1-1 {
+    width: 75px;
+    height: 35px;
+    border-bottom-left-radius: 162px;
+    border-bottom-right-radius: 197px;
+    background-color: white;
+    margin-top: 25px;
+  }
+  .tooth-1-2 {
+    width: 55px;
+    height: 45px;
+    border-bottom-left-radius: 162px;
+    border-bottom-right-radius: 197px;
+    background-color: white;
+    margin-top: 25px;
+  }
+  .mounth-down {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    background-color: #ff6695;
+    width: 100%;
+    height: 25px;
+    z-index: 2;
+    display: flex;
+    justify-content: flex-start;
+    gap: 3px;
+  }
+  .tooth-2 {
+    width: 55px;
+    height: 35px;
+    border-top-left-radius: 162px;
+    border-top-right-radius: 197px;
+    background-color: white;
+    position: relative;
+    bottom: 35px;
+  }
+  .tooth-2-5 {
+    width: 50px;
+    height: 55px;
+    border-top-left-radius: 85px;
+    border-top-right-radius: 55px;
+    background-color: white;
+    margin-bottom: 25px;
+    position: relative;
+    bottom: 55px;
+  }
+  .tooth-2-6 {
+    width: 50px;
+    height: 55px;
+    border-top-left-radius: 55px;
+    border-top-right-radius: 85px;
+    background-color: white;
+    margin-bottom: 25px;
+    position: relative;
+    bottom: 55px;
+  }
+  .tooth-2-1 {
+    width: 75px;
+    height: 35px;
+    border-top-left-radius: 162px;
+    border-top-right-radius: 197px;
+    background-color: white;
+    margin-bottom: 25px;
+    position: relative;
+    bottom: 35px;
+  }
+  .tooth-2-2 {
+    width: 55px;
+    height: 45px;
+    border-top-left-radius: 162px;
+    border-top-right-radius: 197px;
+    background-color: white;
+    margin-bottom: 25px;
+    position: relative;
+    bottom: 45px;
   }
 `;
