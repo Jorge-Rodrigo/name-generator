@@ -1,4 +1,4 @@
-const getRandomElement = (array) => {
+const getRandomElement = (array: string[]) => {
   const randomIndex = Math.floor(Math.random() * array.length);
   return array[randomIndex];
 };
@@ -110,7 +110,7 @@ const generateRandomSyllable = () => {
   return getRandomElement(syllables);
 };
 
-export const generateRandomName = (length) => {
+export const generateRandomName = (length: number) => {
   let name = "";
   for (let i = 0; i < length; i++) {
     name += generateRandomSyllable();

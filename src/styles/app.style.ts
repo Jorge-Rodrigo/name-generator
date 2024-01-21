@@ -58,6 +58,28 @@ export const AppStyle = styled.div`
   flex-wrap: nowrap;
   flex-direction: column;
   margin-top: 40px;
+  .select-div {
+    display: flex;
+    gap: 20px;
+    .select {
+      color: #fe1d8d;
+      background-color: #000;
+      box-shadow: -1px 13px 26px -1px rgba(251, 66, 158, 0.22);
+      border: 1px solid #fb429e;
+      border-radius: 18px;
+      padding: 5px 15px;
+      font-size: 20px;
+      transition: box-shadow 0.3s, transform 0.3s;
+      cursor: pointer;
+      &:hover {
+        box-shadow: -1px 20px 40px -1px rgba(251, 66, 158, 0.4);
+        transform: translateY(-5px);
+        background-color: #ff6695;
+        color: #000;
+      }
+    }
+  }
+
   .button-container-1 {
     position: relative;
     width: 100px;
