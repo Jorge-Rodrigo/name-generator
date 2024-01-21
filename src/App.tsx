@@ -1,6 +1,11 @@
 import { useState } from "react";
 import { AppStyle, Monster } from "./styles/app.style";
-import { generateRandomName } from "./utils/rpg-generator";
+import {
+  generateDnDName,
+  generateFemaleName,
+  generateMaleName,
+  generateRandomName,
+} from "./utils/rpg-generator";
 
 function App() {
   const [name, setName] = useState("");
@@ -17,7 +22,21 @@ function App() {
       changeName();
     }
     if (type === "DnD") {
-      console.log("tipo de nome 2");
+      const randomDnDName = generateRandomName(4);
+      setName(randomDnDName.charAt(0).toUpperCase() + randomDnDName.slice(1));
+      console.log(randomDnDName);
+    }
+    if (type === "male") {
+      const randomMaleName = generateMaleName(6);
+      setName(randomMaleName.charAt(0).toUpperCase() + randomMaleName.slice(1));
+      console.log(randomMaleName);
+    }
+    if (type === "female") {
+      const randomFemaleName = generateFemaleName(6);
+      setName(
+        randomFemaleName.charAt(0).toUpperCase() + randomFemaleName.slice(1)
+      );
+      console.log(randomFemaleName);
     }
   };
 
@@ -65,7 +84,19 @@ function App() {
             onClick={() => setType("DnD")}
             className={type === "DnD" ? "selected" : "select"}
           >
-            DnD
+            DnD Aleatorio
+          </button>
+          <button
+            onClick={() => setType("male")}
+            className={type === "male" ? "selected" : "select"}
+          >
+            DnD Masculino
+          </button>
+          <button
+            onClick={() => setType("female")}
+            className={type === "female" ? "selected" : "select"}
+          >
+            DnD Feminino
           </button>
         </div>
         <div className="button-container-1">

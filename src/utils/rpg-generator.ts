@@ -117,3 +117,132 @@ export const generateRandomName = (length: number) => {
   }
   return name;
 };
+
+export const generateDnDName = (length: number) => {
+  const prefixes = [
+    "Vor",
+    "Thor",
+    "Gim",
+    "Bal",
+    "Kor",
+    "Zor",
+    "Mak",
+    "Lor",
+    "Kil",
+    "Al",
+    "El",
+    "Lil",
+    "Gal",
+    "Kil",
+    "Zil",
+    "Myl",
+    "Lyr",
+    "Shi",
+  ];
+  const suffixes = [
+    "dor",
+    "gar",
+    "morn",
+    "grim",
+    "drek",
+    "thar",
+    "rak",
+    "thos",
+    "mar",
+    "a",
+    "ra",
+    "la",
+    "na",
+    "thra",
+    "sha",
+    "lya",
+    "thys",
+    "mi",
+  ];
+
+  let name = getRandomElement(prefixes) + getRandomElement(suffixes);
+
+  while (name.length < length) {
+    name += generateRandomSyllable();
+  }
+
+  return name.slice(0, length);
+};
+
+export const generateMaleName = (length: number) => {
+  const prefixes = [
+    "Vor",
+    "Thor",
+    "Gim",
+    "Bal",
+    "Kor",
+    "Zor",
+    "Mak",
+    "Lor",
+    "Kil",
+    "Rog",
+    "Bran",
+    "Drog",
+  ];
+  const suffixes = [
+    "dor",
+    "gar",
+    "morn",
+    "grim",
+    "drek",
+    "thar",
+    "rak",
+    "thos",
+    "mar",
+    "don",
+    "bar",
+    "tor",
+  ];
+
+  let name = getRandomElement(prefixes) + getRandomElement(suffixes);
+
+  while (name.length < length) {
+    name += generateRandomSyllable();
+  }
+
+  return name.slice(0, length);
+};
+
+export const generateFemaleName = (length: number) => {
+  const prefixes = [
+    "Al",
+    "El",
+    "Lil",
+    "Gal",
+    "Kil",
+    "Zil",
+    "Myl",
+    "Lyr",
+    "Shi",
+    "Ari",
+    "Cer",
+    "Eil",
+  ];
+  const suffixes = [
+    "a",
+    "ra",
+    "la",
+    "na",
+    "thra",
+    "sha",
+    "lya",
+    "thys",
+    "mi",
+    "di",
+    "si",
+    "vi",
+  ];
+
+  let name = getRandomElement(prefixes) + getRandomElement(suffixes);
+
+  while (name.length < length) {
+    name += generateRandomSyllable();
+  }
+
+  return name.slice(0, length);
+};
