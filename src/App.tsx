@@ -22,7 +22,7 @@ function App() {
       changeName();
     }
     if (type === "DnD") {
-      const randomDnDName = generateRandomName(4);
+      const randomDnDName = generateDnDName(6);
       setName(randomDnDName.charAt(0).toUpperCase() + randomDnDName.slice(1));
       console.log(randomDnDName);
     }
