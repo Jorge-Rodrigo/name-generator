@@ -52,13 +52,19 @@ function App() {
 
       <AppStyle>
         <h1 className="title">Gerador de Nomes</h1>
-        <p>Aqui Podera escolher qual tipo de nome sera gerado!</p>
+        <p>Qual tipo de nome sera gerado?</p>
 
         <div className="select-div">
-          <button onClick={() => setType("rpg")} className="select">
+          <button
+            onClick={() => setType("rpg")}
+            className={type === "rpg" ? "selected" : "select"}
+          >
             Monstro
           </button>
-          <button onClick={() => setType("DnD")} className="select">
+          <button
+            onClick={() => setType("DnD")}
+            className={type === "DnD" ? "selected" : "select"}
+          >
             DnD
           </button>
         </div>
@@ -74,8 +80,11 @@ function App() {
             Gerar
           </button>
         </div>
-        <p>Nome Gerado:</p>
-        <p>{name}</p>
+        {name != "" && (
+          <p className="name">
+            Nome Gerado: <span>{name}</span>
+          </p>
+        )}
       </AppStyle>
       <div className="mounth-down">
         <div className="tooth-2"></div>
