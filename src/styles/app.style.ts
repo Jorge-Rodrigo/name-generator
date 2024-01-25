@@ -73,10 +73,14 @@ export const AppStyle = styled.div`
     text-decoration: underline;
     font-size: 35px;
     margin-top: 22px;
+    text-align: center;
   }
   .select-div {
     display: flex;
     gap: 20px;
+    @media (max-width: 700px) {
+      flex-direction: column;
+    }
     .selected {
       box-shadow: -1px 20px 40px -1px rgba(251, 66, 158, 0.4);
       transform: translateY(-5px);
@@ -172,6 +176,9 @@ export const AppStyle = styled.div`
     overflow: hidden;
     font-weight: bold;
   }
+  @media (max-width: 700px) {
+    margin-bottom: 80px;
+  }
 `;
 
 export const Monster = styled.div`
@@ -188,12 +195,11 @@ export const Monster = styled.div`
     display: flex;
     justify-content: flex-start;
     gap: 3px;
-    /* transform: translateY(-50%); */
     animation: ${moveMounthUp} 2s forwards;
   }
 
   .tooth-1 {
-    width: 55px;
+    width: 55vw;
     height: 35px;
     border-bottom-left-radius: 162px;
     border-bottom-right-radius: 197px;
@@ -202,7 +208,7 @@ export const Monster = styled.div`
     animation: ${moveToothhUp} 2s forwards;
   }
   .tooth-1-5 {
-    width: 50px;
+    width: 50vw;
     height: 55px;
     border-bottom-left-radius: 85px;
     border-bottom-right-radius: 55px;
@@ -211,7 +217,7 @@ export const Monster = styled.div`
     animation: ${moveToothhUp} 2s forwards;
   }
   .tooth-1-6 {
-    width: 50px;
+    width: 50vw;
     height: 55px;
     border-bottom-left-radius: 55px;
     border-bottom-right-radius: 85px;
@@ -220,7 +226,7 @@ export const Monster = styled.div`
     animation: ${moveToothhUp} 2s forwards;
   }
   .tooth-1-1 {
-    width: 75px;
+    width: 75vw;
     height: 35px;
     border-bottom-left-radius: 162px;
     border-bottom-right-radius: 197px;
@@ -229,7 +235,7 @@ export const Monster = styled.div`
     animation: ${moveToothhUp} 2s forwards;
   }
   .tooth-1-2 {
-    width: 55px;
+    width: 55vw;
     height: 45px;
     border-bottom-left-radius: 162px;
     border-bottom-right-radius: 197px;
@@ -251,7 +257,7 @@ export const Monster = styled.div`
     animation: ${moveMounthDown} 2s forwards;
   }
   .tooth-2 {
-    width: 55px;
+    width: 55vw;
     height: 35px;
     border-top-left-radius: 162px;
     border-top-right-radius: 197px;
@@ -260,7 +266,7 @@ export const Monster = styled.div`
     bottom: 35px;
   }
   .tooth-2-5 {
-    width: 50px;
+    width: 50vw;
     height: 55px;
     border-top-left-radius: 85px;
     border-top-right-radius: 55px;
@@ -270,7 +276,7 @@ export const Monster = styled.div`
     bottom: 55px;
   }
   .tooth-2-6 {
-    width: 50px;
+    width: 50vw;
     height: 55px;
     border-top-left-radius: 55px;
     border-top-right-radius: 85px;
@@ -280,7 +286,7 @@ export const Monster = styled.div`
     bottom: 55px;
   }
   .tooth-2-1 {
-    width: 75px;
+    width: 75vw;
     height: 35px;
     border-top-left-radius: 162px;
     border-top-right-radius: 197px;
@@ -290,7 +296,7 @@ export const Monster = styled.div`
     bottom: 35px;
   }
   .tooth-2-2 {
-    width: 55px;
+    width: 55vw;
     height: 45px;
     border-top-left-radius: 162px;
     border-top-right-radius: 197px;
